@@ -1,0 +1,23 @@
+:root {
+    --color1: #F2E3D5;
+    --color2: #3CA6A6;
+    --color3: #026773;
+    --color4: #024959;
+    --color5: #012E40;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-size: 40px;
+    color: var(--color1);
+    background-color: var(--color5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    padding: 40px 0px;
+}
