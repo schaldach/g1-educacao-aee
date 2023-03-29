@@ -1,23 +1,73 @@
+@font-face {
+    font-family: ValueSerifPro;
+    src: url(assets/value_serif_pro_regular.ttf);
+}
+@font-face {
+    font-family: EuclidCircular;
+    src: url(assets/euclid_circular_a_medium.ttf);
+}
+
 :root {
-    --color1: #F2E3D5;
+    --color1: #ffffff;
     --color2: #3CA6A6;
     --color3: #026773;
     --color4: #024959;
     --color5: #012E40;
 }
-
+*{
+    box-sizing: border-box;
+}
 html, body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color5);
+    display: grid;
+}
+header{
+    position: absolute;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'ValueSerifPro';
+    color: var(--color1);
+    font-size: 35px;
+}
 .title{
-    font-size: 40px;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 100px;
+    font-family: 'ValueSerifPro';
     color: var(--color1);
     background-color: var(--color5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    padding: 40px 0px;
+    border-radius: 100px;
+    background-color: var(--color4);
+    height: 95%;
+    width: 50%;
+    left: 0;
+    bottom: -15vh;
+    position: absolute;
+}
+.start{
+    background-color: var(--color1);
+    color: var(--color4);
+    border-radius: 50px;
+    padding-top: 40px;
+    font-family: 'EuclidCircular';
+    right: 5vw;
+    bottom: -5vh;
+    font-size: 50px;
+    text-align: center;
+    height: 85%;
+    width: 45%;
+    position: absolute;
 }
