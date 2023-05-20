@@ -13,6 +13,7 @@
   --color3: #026773;
   --color4: #024959;
   --color5: #012e40;
+  --colormarkup: #00ed64;
 }
 * {
   box-sizing: border-box;
@@ -23,7 +24,9 @@ body {
   padding: 0;
   background-color: var(--color5);
   overflow-x: hidden;
+  min-height: 200vh;
 }
+
 ::-webkit-scrollbar {
   background-color: var(--color5);
   width: 10px;
@@ -37,12 +40,41 @@ body {
   background-color: var(--color3);
 }
 
-main {
-  width: 100vw;
-  min-height: 100vh;
-  padding-bottom: 10vh;
+.n1 {
+  width: 90vw;
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr;
+}
+.n2 {
+  background-color: var(--color4);
+  display: flex;
+  position: relative;
+  top: 100px;
+  justify-content: end;
+}
+.explanation-2{
+  width: 80vw;
+  position: relative;
+  z-index: 1;
+  background-color: var(--color5);
+  border-top-left-radius: 50px;
+  font-size: 28px;
+  font-family: "ValueSerifPro";
+  color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+.background-n1{
+  background-color: var(--color4);
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: calc(50% + 100px);
+  z-index: 1;
+  border-bottom-right-radius: 50px;
 }
 header {
   height: 20vh;
@@ -59,22 +91,30 @@ header {
 }
 .title {
   font-size: 50px;
+  color: var(--colormarkup);
 }
 .explanation {
   font-size: 28px;
-  padding: 100px 10px 100px 20px;
+  position: relative;
+  z-index: 1;
+  padding: 100px 40px 100px 20px;
   font-family: "ValueSerifPro";
   color: var(--color1);
   background-color: var(--color5);
-  border-radius: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
   background-color: var(--color4);
-  height: fit-content;
-  width: 100%;
-  left: 0;
-  top: 20vh;
+  height: 100%;
+  width: calc(100% + 30px);
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+.explanation>img{
+  aspect-ratio: 1;
+  width: 50%;
+  left: calc(25% - 20px);
+  position: relative;
 }
 .subtitle{
     font-size: 18px;
@@ -87,13 +127,15 @@ a{
     width: fit-content;
 }
 a:hover{
-    border-bottom: solid 2px var(--color2);
+    border-bottom: solid 2px var(--colormarkup);
 }
 span{
     color: var(--color2);
 }
 .images {
-  width: 90%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
   height: fit-content;
   display: flex;
   gap: 0;
@@ -107,7 +149,7 @@ span{
 }
 
 @media screen and (max-width: 1024px) {
-    main{
+    .n1{
         grid-template-columns: 1fr;
         place-items: center;
     }
