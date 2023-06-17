@@ -13,7 +13,8 @@
   --color3: #026773;
   --color4: #024959;
   --color5: #012e40;
-  --colormarkup: #00ed64;
+  --colormarkup: #aeffc6;
+  --colormarkup2: #00ff6a;
 }
 * {
   box-sizing: border-box;
@@ -116,13 +117,14 @@ body {
   left: 5vw;
   height: 250px;
   width: 150px;
-  border-bottom: 3px solid var(--colormarkup);
-  border-left: 3px solid var(--colormarkup);
+  border-bottom: 3px solid ;
+  border-left: 3px solid ;
+  animation: border-bright infinite 2s ;
 }
 .flow-n2{
-  border-top: 3px solid var(--colormarkup);
-  border-right: 3px solid var(--colormarkup);
-  border-bottom: 3px solid var(--colormarkup);
+  border-top: 3px solid ;
+  border-right: 3px solid ;
+  border-bottom: 3px solid ;
   position: absolute;
   right: 150px;
   width: 100px;
@@ -131,21 +133,23 @@ body {
   height: 450px;
   border-bottom-right-radius: 75px;
   border-top-right-radius: 75px;
+  animation: border-bright infinite 2s ;
 }
 .flow-n3{
-  border-left: 3px solid var(--colormarkup);
-  border-bottom: 3px solid var(--colormarkup);
+  border-left: 3px solid ;
+  border-bottom: 3px solid ;
   position: absolute;
   left: 100px;
-  width: 250px;
+  width: 120px;
   z-index: 2;
   height: 250px;
   border-bottom-left-radius: 75px;
   top: -35px;
+  animation: border-bright infinite 2s ;
 }
 .flow-n32{
-  border-right: 3px solid var(--colormarkup);
-  border-bottom: 3px solid var(--colormarkup);
+  border-right: 3px solid;
+  border-bottom: 3px solid;
   position: absolute;
   right: 100px;
   width: 250px;
@@ -153,7 +157,41 @@ body {
   height: 200px;
   border-bottom-right-radius: 75px;
   top: -35px;
+  animation: border-bright infinite 2s ;
 }
+@keyframes border-bright {
+  0% {
+    border-right-color: var(--colormarkup);
+    border-left-color: var(--colormarkup);
+    border-top-color: var(--colormarkup);
+    border-bottom-color: var(--colormarkup);
+    border-right-width: 3px;
+    border-left-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+  }
+  50% {
+    border-right-color: var(--colormarkup2);
+    border-left-color: var(--colormarkup2);
+    border-top-color: var(--colormarkup2);
+    border-bottom-color: var(--colormarkup2);
+    border-right-width: 4px;
+    border-left-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+  }
+  100% {
+    border-right-color: var(--colormarkup);
+    border-left-color: var(--colormarkup);
+    border-top-color: var(--colormarkup);
+    border-bottom-color: var(--colormarkup);
+    border-right-width: 3px;
+    border-left-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+  }
+}
+
 header {
   height: 20vh;
   top: 0;
@@ -174,7 +212,7 @@ header>div{
 }
 .title {
   font-size: 50px;
-  color: var(--colormarkup);
+  color: var(--colormarkup2);
 }
 .title-second{
   font-size: 38px;
@@ -213,7 +251,7 @@ a{
     width: fit-content;
 }
 a:hover{
-    border-bottom: solid 2px var(--colormarkup);
+    border-bottom: solid 2px var(--colormarkup2);
 }
 span{
     color: var(--color2);
