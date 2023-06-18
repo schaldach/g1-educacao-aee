@@ -13,8 +13,7 @@
   --color3: #026773;
   --color4: #024959;
   --color5: #012e40;
-  --colormarkup: #aeffc6;
-  --colormarkup2: #00ff6a;
+  --colormarkup: #00ee63;
 }
 * {
   box-sizing: border-box;
@@ -24,6 +23,8 @@ body{
 }
 html,
 body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px;
   margin: 0;
   padding: 0;
   background-color: var(--color5);
@@ -82,7 +83,55 @@ body {
   gap: 0px;
   background-color: var(--color5);
 }
-
+.nextbutton{
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  right: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  z-index: 4;
+  cursor: pointer;
+  top: 30px;
+  color: var(--colormarkup);
+}
+.nextbutton a{
+  border: none;
+}
+.nextbutton a:hover{
+  border: none;
+}
+.nextbutton:hover{
+  color: #0eb654;
+}
+.nextbutton svg{
+  width: 50px;
+  height: 50px;
+}
+.nextbuttonstart{
+  border: none;
+  outline: none;
+  position: absolute;
+  background: none;
+  bottom: 0;
+  right: 50px;
+  z-index: 2;
+}
+.nextbuttonstart a{
+  font-family: "ValueSerifPro";
+  border-radius: 10px;
+  font-size: 25px;
+  border: none;
+  color: var(--color5);
+  background: var(--colormarkup);
+  transition: all 0.5s;
+  padding: 25px;
+}
+.nextbuttonstart a:hover{
+  border-radius: 50px;
+  border: none;
+}
 .explanation-2{
   width: 80vw;
   position: relative;
@@ -99,7 +148,7 @@ body {
 .explanation-2:nth-child(1){
   width: calc(90vw - 10px);
   border-top-left-radius: 50px;
-  padding: 75px 350px 75px 40px;
+  padding: 5vw 25vw 5vw 3vw;
 }
 .background-n1{
   background-color: var(--color4);
@@ -117,14 +166,13 @@ body {
   left: 5vw;
   height: 250px;
   width: 150px;
-  border-bottom: 3px solid ;
-  border-left: 3px solid ;
-  animation: border-bright infinite 2s ;
+  border-bottom: 3px solid var(--colormarkup);
+  border-left: 3px solid var(--colormarkup);
 }
 .flow-n2{
-  border-top: 3px solid ;
-  border-right: 3px solid ;
-  border-bottom: 3px solid ;
+  border-top: 3px solid var(--colormarkup);
+  border-right: 3px solid var(--colormarkup);
+  border-bottom: 3px solid var(--colormarkup);
   position: absolute;
   right: 150px;
   width: 100px;
@@ -133,11 +181,10 @@ body {
   height: 450px;
   border-bottom-right-radius: 75px;
   border-top-right-radius: 75px;
-  animation: border-bright infinite 2s ;
 }
 .flow-n3{
-  border-left: 3px solid ;
-  border-bottom: 3px solid ;
+  border-left: 3px solid var(--colormarkup);
+  border-bottom: 3px solid var(--colormarkup);
   position: absolute;
   left: 100px;
   width: 120px;
@@ -145,11 +192,10 @@ body {
   height: 250px;
   border-bottom-left-radius: 75px;
   top: -35px;
-  animation: border-bright infinite 2s ;
 }
 .flow-n32{
-  border-right: 3px solid;
-  border-bottom: 3px solid;
+  border-right: 3px solid var(--colormarkup);
+  border-bottom: 3px solid var(--colormarkup);
   position: absolute;
   right: 100px;
   width: 250px;
@@ -157,39 +203,6 @@ body {
   height: 200px;
   border-bottom-right-radius: 75px;
   top: -35px;
-  animation: border-bright infinite 2s ;
-}
-@keyframes border-bright {
-  0% {
-    border-right-color: var(--colormarkup);
-    border-left-color: var(--colormarkup);
-    border-top-color: var(--colormarkup);
-    border-bottom-color: var(--colormarkup);
-    border-right-width: 3px;
-    border-left-width: 3px;
-    border-top-width: 3px;
-    border-bottom-width: 3px;
-  }
-  50% {
-    border-right-color: var(--colormarkup2);
-    border-left-color: var(--colormarkup2);
-    border-top-color: var(--colormarkup2);
-    border-bottom-color: var(--colormarkup2);
-    border-right-width: 4px;
-    border-left-width: 4px;
-    border-top-width: 4px;
-    border-bottom-width: 4px;
-  }
-  100% {
-    border-right-color: var(--colormarkup);
-    border-left-color: var(--colormarkup);
-    border-top-color: var(--colormarkup);
-    border-bottom-color: var(--colormarkup);
-    border-right-width: 3px;
-    border-left-width: 3px;
-    border-top-width: 3px;
-    border-bottom-width: 3px;
-  }
 }
 
 header {
@@ -212,7 +225,7 @@ header>div{
 }
 .title {
   font-size: 50px;
-  color: var(--colormarkup2);
+  color: var(--colormarkup);
 }
 .title-second{
   font-size: 38px;
@@ -251,7 +264,7 @@ a{
     width: fit-content;
 }
 a:hover{
-    border-bottom: solid 2px var(--colormarkup2);
+    border-bottom: solid 2px var(--colormarkup);
 }
 span{
     color: var(--color2);
@@ -278,31 +291,6 @@ span{
   width: 100%;
   height: 50px;
 }
-
-@media screen and (max-width: 1024px) {
-    .n1{
-        grid-template-columns: 1fr;
-        place-items: center;
-    }
-    header{
-        font-size: 28px;
-    }
-    .explanation{
-        border-radius: 10px;
-        padding: 30px 20px;
-        font-size: 22px;
-        width: 90%;
-        border-radius: 0px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-    .title{
-        font-size: 38px;
-    }
-    .images{
-        width: 90%;
-        border-radius: 0px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
+.hidden{
+  display: none;
 }
