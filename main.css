@@ -74,6 +74,12 @@ body {
   background-color: var(--color4);
   padding: 75px 40px 75px 350px;;
 }
+.n3:nth-child(2n) .infobutton a{
+  border-bottom: solid 2px var(--color5);
+}
+.n3:nth-child(2n) .infobutton a:hover{
+  border-bottom: solid 2px var(--colormarkup);
+}
 .n3border:nth-child(1n){
   width: 100vw;
   display: grid;
@@ -132,6 +138,23 @@ body {
   border-radius: 50px;
   border: none;
 }
+.infobutton{
+  position: relative;
+  width: fit-content;
+  display: flex;
+  margin-top: 15px;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--color1);
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.infobutton svg{
+  width: 25px;
+  height: 25px;
+}
+
 .explanation-2{
   width: 80vw;
   position: relative;
