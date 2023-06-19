@@ -137,7 +137,7 @@ body {
   position: relative;
   z-index: 2;
   background-color: var(--color5);
-  font-size: 28px;
+  font-size: 26px;
   font-family: "ValueSerifPro";
   color: var(--color1);
   display: flex;
@@ -165,7 +165,7 @@ body {
   border-bottom-left-radius: 75px;
   left: 5vw;
   height: 250px;
-  width: 150px;
+  width: 11vw;
   border-bottom: 3px solid var(--colormarkup);
   border-left: 3px solid var(--colormarkup);
 }
@@ -174,8 +174,8 @@ body {
   border-right: 3px solid var(--colormarkup);
   border-bottom: 3px solid var(--colormarkup);
   position: absolute;
-  right: 150px;
-  width: 100px;
+  right: 7.5vw;
+  width: 7.5vw;
   top: -250px;
   z-index: 2;
   height: 450px;
@@ -186,8 +186,8 @@ body {
   border-left: 3px solid var(--colormarkup);
   border-bottom: 3px solid var(--colormarkup);
   position: absolute;
-  left: 100px;
-  width: 120px;
+  left: 7.5vw;
+  width: 9vw;
   z-index: 2;
   height: 250px;
   border-bottom-left-radius: 75px;
